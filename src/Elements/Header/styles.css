@@ -1,0 +1,16 @@
+/* styles.css */
+/* Define styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .navigation-bar {
+    /* Your responsive styles here */
+  }
+  /* Adjust other styles as needed */
+}
+
+/* Define styles for larger screens */
+@media screen and (min-width: 769px) {
+  .navigation-bar {
+    /* Your responsive styles here */
+  }
+  /* Adjust other styles as needed */
+}

@@ -1,0 +1,116 @@
+@import "stylesheets/Header";
+
+html,
+body,
+#main,
+#root {
+  background: #fff;
+  color: #000;
+  margin: 0px;
+  padding: 0px;
+  margin: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.close:before {
+  content: "✕";
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.loginHeading {
+  @apply font-[normal] text-[#0f0f0f];
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .loginImage {
+    max-width: 100%;
+    width: 30%;
+  }
+}
+
+.loginImage {
+  @apply max-w-full w-1/5 flex justify-center mb-5 pr-[3.5px];
+}
+
+.load-bar {
+  position: relative;
+  /* margin-top: 20px; */
+  width: 100%;
+  height: 3px;
+  background-color: #fdba2c;
+}
+
+.bar {
+  content: "";
+  display: inline;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 50%;
+  text-align: center;
+}
+
+.bar:nth-child(1) {
+  background-color: #12327a;
+  animation: loading 3s linear infinite;
+}
+
+.bar:nth-child(2) {
+  background-color: #3b78e7;
+  animation: loading 3s linear 1s infinite;
+}
+
+.bar:nth-child(3) {
+  background-color: #bac7e4;
+  animation: loading 3s linear 2s infinite;
+}
+
+@keyframes loading {
+  from {
+    left: 0;
+    width: 0;
+    z-index: 100;
+  }
+
+  33.3333% {
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  to {
+    left: 0;
+    width: 100%;
+  }
+}
